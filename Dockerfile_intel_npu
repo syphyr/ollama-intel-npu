@@ -416,8 +416,8 @@ ENV CGO_CFLAGS=-I$GENAI_DIR/runtime/include
 RUN $GENAI_DIR/setupvars.sh
 
 WORKDIR /home/openvino
-RUN git clone https://github.com/syphyr/ollama_ov.git
-WORKDIR /home/openvino/ollama_ov
+RUN git clone https://github.com/syphyr/openvino_contrib.git ollama_ov
+WORKDIR /home/openvino/ollama_ov/modules/ollama_openvino
 
 RUN go build -o /bin/ollama .
 
