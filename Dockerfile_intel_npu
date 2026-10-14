@@ -426,4 +426,4 @@ EXPOSE 11434
 
 RUN echo "/bin/ollama serve" >> $GENAI_DIR/setupvars.sh
 
-ENTRYPOINT ["/opt/intel/openvino_2025.1.0.0/setupvars.sh"]
+ENTRYPOINT ["/opt/intel/openvino_2026.4.1.0/setupvars.sh"]
