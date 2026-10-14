@@ -428,6 +428,4 @@ RUN chmod +x /bin/bash-ov
 ENV OLLAMA_HOST=0.0.0.0:11434
 EXPOSE 11434
 
-RUN echo "/bin/ollama serve" >> $GENAI_DIR/setupvars.sh
-
-ENTRYPOINT ["/opt/intel/openvino_2026.4.1.0/setupvars.sh"]
+ENTRYPOINT ["/bin/bash", "-c", "source /opt/intel/openvino_2026.4.1.0/setupvars.sh && /bin/ollama serve"]
