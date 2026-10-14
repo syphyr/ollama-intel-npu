@@ -222,7 +222,7 @@ RUN sed -ri -e 's@^UMASK[[:space:]]+[[:digit:]]+@UMASK 000@g' /etc/login.defs &&
 
 RUN mkdir /opt/intel
 
-ENV INTEL_OPENVINO_DIR /opt/intel/openvino
+ENV INTEL_OPENVINO_DIR=/opt/intel/openvino
 
 COPY --from=base /opt/intel/ /opt/intel/
 
