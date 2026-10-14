@@ -381,7 +381,7 @@ CMD ["/bin/bash"]
 
 # Setup custom layers below
 
-FROM ov_base as ollama
+FROM ov_base AS ollama
 USER root
 SHELL ["/bin/bash", "-c"]
 
