@@ -421,6 +421,10 @@ WORKDIR /home/openvino/ollama_ov/modules/ollama_openvino
 
 RUN go build -o /bin/ollama .
 
+# Create a wrapper script
+RUN printf "#!/bin/bash\ncd /home/openvino && source /opt/intel/openvino_2026.4.1.0/setupvars.sh && exec bash\n" > /bin/bash-ov
+RUN chmod +x /bin/bash-ov
+
 ENV OLLAMA_HOST=0.0.0.0:11434
 EXPOSE 11434
 
